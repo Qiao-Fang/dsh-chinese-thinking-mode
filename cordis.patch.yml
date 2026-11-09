@@ -1,0 +1,20 @@
+# Bundle patch layer for dsh-chinese-thinking-mode.
+# Inserts the host plugin that registers the "思考语言要求：简体中文" runtime
+# context. Adjust the config below (or override this entry from the profile's
+# own cordis.patch.yml) to tune the instruction.
+- insert:
+    - id: chinese-thinking-mode
+      name: dsh-chinese-thinking-mode
+      config:
+        enabled: true
+        # Position inside the runtime-context snapshot. Built-in contexts use
+        # 100-210, so 400 makes this the last entry.
+        order: 400
+        # Extra proper nouns to keep verbatim, e.g. ["Qt", "Kubernetes"].
+        extraProperNouns: []
+        # In-thinking persona block. Set personaEnabled: false to drop it, or
+        # set persona to a multi-line string to replace the default one.
+        personaEnabled: true
+        # Extra requirement appended as a final paragraph, e.g.
+        # "推导数学公式时保留符号和公式原文。"
+        extraInstruction: ''

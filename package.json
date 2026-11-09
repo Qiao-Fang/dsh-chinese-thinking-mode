@@ -1,0 +1,49 @@
+{
+  "name": "dsh-chinese-thinking-mode",
+  "version": "0.3.1",
+  "description": "Make DeepSeek reason in Simplified Chinese and keep a whale-loli in-thinking persona while proper nouns stay in their original form.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "plugin",
+    "reasoning",
+    "thinking",
+    "chinese"
+  ],
+  "author": "Qiao-Fang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qiao-Fang/dsh-chinese-thinking-mode.git"
+  },
+  "homepage": "https://github.com/Qiao-Fang/dsh-chinese-thinking-mode#readme",
+  "bugs": {
+    "url": "https://github.com/Qiao-Fang/dsh-chinese-thinking-mode/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
